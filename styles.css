@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Poppins:wght@300;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --alpine-frost: #dfdfd9;
+    --alpine-frost-opaque: #dfdfd920;
+    --artful-red: #b40101;
+    --crimson-red: #990000;
+    --dark-slate: #222222;
+    --dark-slate-opaque: #22222250;
+    --highlight: #efefde;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--dark-slate);
+    color: var(--alpine-frost);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    padding: 0.5rem;
+}
+
+section {
+    background-color: var(--alpine-frost-opaque);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid var(--alpine-frost);
+}
+
+/*  
+    ********************
+    Navigation Styles
+    ********************
+*/
+
+nav {
+    background-image: linear-gradient(var(--artful-red), var(--crimson-red));
+    padding: 0.5rem;
+}
+
+nav .nav-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li>:first-child {
+    margin-right: 0.5rem;
+}
+
+nav .profile-image {
+    border-radius: 50%;
+    width: 3rem;
+}
+
+nav .wordmark-image {
+    width: 4rem;
+}
+
+nav .material-icons {
+    color: var(--highlight);
+    background-color: var(--dark-slate-opaque);
+    border-radius: 50%;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+/*  
+    ********************
+    Card Styles
+    ********************
+*/
+
+.card-container {
+    margin-bottom: 1.5rem;
+}
+
+.card-container .card-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.card-container .card-profile img {
+    border-radius: 50%;
+    width: 2rem;
+    margin-right: 0.25rem;
+}
+
+.card-container .card-profile h2 {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.card-container .card-image img {
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.card-container .card-body h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.card-container .card-body p {
+    font-size: 0.9rem;
+}
+
+.card-container .card-rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border-bottom: 1px solid var(--alpine-frost-opaque);
+}
+
+.card-container .card-rating .material-symbols-outlined {
+    padding: 0.5rem;
+    background-color: var(--alpine-frost-opaque);
+    border-radius: 50%;
+    margin-left: 0.5rem;
+}
+
+/*  
+    ********************
+    Input Styles
+    ********************
+*/
+
+input, 
+button {
+    color: var(--alpine-frost);
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+input[type=submit],
+button {
+    background-image: linear-gradient(var(--artful-red), var(--crimson-red));
+}
+
+input[type=text] {
+    background-color: var(--alpine-frost-opaque);
+}
+
+input[type=file] {
+    background-color: var(--alpine-frost-opaque);
+}
+
+input[type=file]::file-selector-button {
+    color: var(--alpine-frost);
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-image: linear-gradient(var(--artful-red), var(--crimson-red));
+    margin-right: 1rem;
+}
+
+input[type=radio] {
+    width: 0;
+}
+
+input[type="radio"]:checked+label span {
+    color: white;
+    background-color: var(--alpine-frost-opaque);
+}
+
+input[type="radio"]+label span {
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+.radio-container {
+    margin-bottom: 1rem;
+}
+
+/*  
+    ********************
+    Profile Info Styles
+    ********************
+*/
+
+.profile-info {
+    margin-bottom: 1rem;
+}
+
+.profile-info>:first-child {
+    border-bottom: 1px solid var(--alpine-frost);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.profile-info div>:first-child {
+    color: white;
+    font-weight: bold;
+}
+
+.profile-info div>:nth-child(2) {
+    font-size: 0.75rem;
+}
+
+/*  
+    ********************
+    Desktop Styles
+    ********************
+*/
+
+@media screen and (min-width:900px) {
+    nav .nav-container {
+        width: 900px;
+        margin: auto;
+    }
+
+    nav .profile-image {
+        width: 4rem;
+    }
+    
+    nav .wordmark-image {
+        width: 6rem;
+    }
+    
+    nav .material-icons {
+        font-size: 2rem;
+    }
+
+    main {
+        width: 900px;
+        margin: auto;
+    }
+
+    .homepage-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .card-container .card-rating {
+        border-bottom: 0px;
+    }
+}

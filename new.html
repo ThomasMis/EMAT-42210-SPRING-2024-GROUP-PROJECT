@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Maltlog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="./profile.html"><img class="profile-image" src="./img/profile.jpg" alt="Profile"></a></li>
+                <li><a href="./index.html"><img class="wordmark-image" src="./img/wordmark.png" alt="Wordmark"></a></li>
+            </ul>
+            <ul>
+                <li><a href="./new.html"><span class="material-icons">add</span></a></li>
+                <li><a href=""><span class="material-icons">search</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <h1>New Log</h1>
+        <form>
+            <input id="name" name="name" type="text" placeholder="Beer Name">
+            <input id="review" name="review" type="text" placeholder="Beer Review">
+     
+            <section class="radio-container">
+                <input type="radio" id="satisfied" name="rating" value="satisfied">
+                <label for="satisfied"><span class="material-symbols-outlined">sentiment_satisfied</span></label>
+                <input type="radio" id="neutral" name="rating" value="neutral">
+                <label for="neutral"><span class="material-symbols-outlined">sentiment_neutral</span></label>
+                <input type="radio" id="dissatisfied" name="rating" value="dissatisfied">
+                <label for="dissatisfied"><span class="material-symbols-outlined">sentiment_dissatisfied</span></label>
+            </section>
+
+            <input id="picture" name="picture" type="file" accept="image/gif, image/jpeg" />
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+
+
+</body>
+
+</html>
